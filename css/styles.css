@@ -4,12 +4,17 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #E0E0E0;
+}
+
 form {
   text-align: center;
   padding: 20px;
+  background: linear-gradient(#28dada, #E0E0E0);
 }
 
-.search {
+#search {
   height: 50px;
   width: 520px;
   padding: 0px 10px;
@@ -19,20 +24,34 @@ form {
   font-size: 0.7em;
 }
 
+#search:focus {
+  outline: none;
+}
+
 .search::placeholder {
   color: gray;
 }
 
 .gallery {
+  height: 100%;
+  width: 100vw;
   display: grid;
   grid-template-columns: repeat(4, 200px);
   justify-content: center;
   grid-gap: 25px 22px;
 }
 
-img {
+.thumbnails {
+  transform: scale(1);
+  transition: all 0.5s ease-out;
   height: 200px;
   width: 200px;
+}
+
+.thumbnails:hover {
+  transform: scale(1.1);
+  transition: all 0.5s ease-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 /*# sourceMappingURL=styles.css.map */
